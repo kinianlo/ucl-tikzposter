@@ -1,0 +1,270 @@
+\settitle{
+    \hspace{15mm}
+    \begin{minipage}{0.75\linewidth}
+        \color{titlefgcolor}
+        {\bfseries \Huge \@title \par}
+        \vspace*{1em}
+        {\huge  \@author \par}
+        \vspace*{1em}
+        {\large  \@institute}
+    \end{minipage}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Define the eight core UCL colours as defined in UCL brand: https://www.ucl.ac.uk/brand/brand-essentials/colour-palette
+\definecolorstyle{UCLBlack}{
+    % define the default color palette for this color style
+    \definecolor{colorOne}{RGB}{0,0,0}
+    \definecolor{colorTwo}{RGB}{226,226,226} % shade of grey extracted from the template provided by UCL
+    \definecolor{colorThree}{RGB}{172,20,90} % Pink / Vibrant of the UCL monotone palette
+}{
+    % Background Colors
+    \colorlet{backgroundcolor}{colorTwo}
+    \colorlet{framecolor}{colorTwo}
+    % Title Colors
+    \colorlet{titlefgcolor}{colorTwo}
+    \colorlet{titlebgcolor}{colorOne}
+    % Block Colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{colorTwo}
+    \colorlet{blockbodybgcolor}{white}
+    \colorlet{blockbodyfgcolor}{black}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{colorThree}
+    \colorlet{innerblocktitlefgcolor}{white}
+    \colorlet{innerblockbodybgcolor}{white}
+    \colorlet{innerblockbodyfgcolor}{black}
+    % note colors
+    \colorlet{notefgcolor}{white}
+    \colorlet{notebgcolor}{colorThree}
+    \colorlet{notefrcolor}{colorThree}
+}
+\definecolorstyle{UCLVibrantYellow}{
+    % define the default color palette for this color style
+    \definecolor{colorOne}{RGB}{255,202,54}
+    \definecolor{colorTwo}{RGB}{255,255,255} % White
+    \definecolor{colorThree}{RGB}{172,20,90} % Pink / Vibrant of the UCL monotone palette
+}{
+    % Background Colors
+    \colorlet{backgroundcolor}{colorTwo}
+    \colorlet{framecolor}{colorTwo}
+    % Title Colors
+    \colorlet{titlefgcolor}{black}
+    \colorlet{titlebgcolor}{colorOne}
+    % Block Colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{black}
+    \colorlet{blockbodybgcolor}{white}
+    \colorlet{blockbodyfgcolor}{black}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{colorThree}
+    \colorlet{innerblocktitlefgcolor}{white}
+    \colorlet{innerblockbodybgcolor}{white}
+    \colorlet{innerblockbodyfgcolor}{black}
+    % note colors
+    \colorlet{notefgcolor}{white}
+    \colorlet{notebgcolor}{colorThree}
+    \colorlet{notefrcolor}{colorThree}
+}
+\definecolorstyle{UCLVibrantPurple}{
+    % define the default color palette for this color style
+    \definecolor{colorOne}{RGB}{80,7,120} % Vibrant Purple of the UCL monotone palette
+    \definecolor{colorTwo}{RGB}{255,255,255} % White
+    \definecolor{colorThree}{RGB}{0,0,0} % Black
+}{
+    % Background Colors
+    \colorlet{backgroundcolor}{colorTwo}
+    \colorlet{framecolor}{colorTwo}
+    % Title Colors
+    \colorlet{titlefgcolor}{colorTwo}
+    \colorlet{titlebgcolor}{colorOne}
+    % Block Colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{colorTwo}
+    \colorlet{blockbodybgcolor}{white}
+    \colorlet{blockbodyfgcolor}{black}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{colorThree}
+    \colorlet{innerblocktitlefgcolor}{white}
+    \colorlet{innerblockbodybgcolor}{white}
+    \colorlet{innerblockbodyfgcolor}{black}
+    % note colors
+    \colorlet{notefgcolor}{white}
+    \colorlet{notebgcolor}{colorThree}
+    \colorlet{notefrcolor}{colorThree}
+}
+
+\definecolorstyle{UCLVibrantPink}{
+    % define the default color palette for this color style
+    \definecolor{colorOne}{RGB}{172,20,90} % Pink / Vibrant of the UCL monotone palette
+    \definecolor{colorTwo}{RGB}{255,255,255} % White
+    \definecolor{colorThree}{RGB}{0,34,72} % Dark Blue of the UCL monotone palette
+}{
+    % Background Colors
+    \colorlet{backgroundcolor}{colorTwo}
+    \colorlet{framecolor}{colorTwo}
+    % Title Colors
+    \colorlet{titlefgcolor}{colorTwo}
+    \colorlet{titlebgcolor}{colorOne}
+    % Block Colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{colorTwo}
+    \colorlet{blockbodybgcolor}{white}
+    \colorlet{blockbodyfgcolor}{black}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{colorThree}
+    \colorlet{innerblocktitlefgcolor}{white}
+    \colorlet{innerblockbodybgcolor}{white}
+    \colorlet{innerblockbodyfgcolor}{black}
+    % note colors
+    \colorlet{notefgcolor}{white}
+    \colorlet{notebgcolor}{colorThree}
+    \colorlet{notefrcolor}{colorThree}
+}
+\definecolorstyle{UCLVibrantGreen}{
+    % define the default color palette for this color style
+    \definecolor{colorOne}{RGB}{82,193,82} % Vibrant Green of the UCL monotone palette
+    \definecolor{colorTwo}{RGB}{255,255,255} % White
+    \definecolor{colorThree}{RGB}{172,20,90} % Pink / Vibrant of the UCL monotone palette
+}{
+    % Background Colors
+    \colorlet{backgroundcolor}{colorTwo}
+    \colorlet{framecolor}{colorTwo}
+    % Title Colors
+    \colorlet{titlefgcolor}{colorTwo}
+    \colorlet{titlebgcolor}{colorOne}
+    % Block Colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{colorTwo}
+    \colorlet{blockbodybgcolor}{white}
+    \colorlet{blockbodyfgcolor}{black}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{colorThree}
+    \colorlet{innerblocktitlefgcolor}{white}
+    \colorlet{innerblockbodybgcolor}{white}
+    \colorlet{innerblockbodyfgcolor}{black}
+    % note colors
+    \colorlet{notefgcolor}{white}
+    \colorlet{notebgcolor}{colorThree}
+    \colorlet{notefrcolor}{colorThree}
+}
+\definecolorstyle{UCLVibrantBlue}{
+    % define the default color palette for this color style
+    \definecolor{colorOne}{RGB}{52,198,198} % Vibrant Blue of the UCL monotone palette
+    \definecolor{colorTwo}{RGB}{255,255,255} % White
+    \definecolor{colorThree}{RGB}{0,34,72} % Dark Blue of the UCL monotone palette
+}{
+    % Background Colors
+    \colorlet{backgroundcolor}{colorTwo}
+    \colorlet{framecolor}{colorTwo}
+    % Title Colors
+    \colorlet{titlefgcolor}{colorTwo}
+    \colorlet{titlebgcolor}{colorOne}
+    % Block Colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{colorTwo}
+    \colorlet{blockbodybgcolor}{white}
+    \colorlet{blockbodyfgcolor}{black}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{colorThree}
+    \colorlet{innerblocktitlefgcolor}{white}
+    \colorlet{innerblockbodybgcolor}{white}
+    \colorlet{innerblockbodyfgcolor}{black}
+    % note colors
+    \colorlet{notefgcolor}{white}
+    \colorlet{notebgcolor}{colorThree}
+    \colorlet{notefrcolor}{colorThree}
+}
+\definecolorstyle{UCLDarkBlue}{
+    % define the default color palette for this color style
+    \definecolor{colorOne}{RGB}{0,34,72} % Dark Blue of the UCL monotone palette
+    \definecolor{colorTwo}{RGB}{255,255,255} % White
+    \definecolor{colorThree}{RGB}{172,20,90} % Pink / Vibrant of the UCL monotone palette
+}{
+    % Background Colors
+    \colorlet{backgroundcolor}{colorTwo}
+    \colorlet{framecolor}{colorTwo}
+    % Title Colors
+    \colorlet{titlefgcolor}{colorTwo}
+    \colorlet{titlebgcolor}{colorOne}
+    % Block Colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{colorTwo}
+    \colorlet{blockbodybgcolor}{white}
+    \colorlet{blockbodyfgcolor}{black}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{colorThree}
+    \colorlet{innerblocktitlefgcolor}{white}
+    \colorlet{innerblockbodybgcolor}{white}
+    \colorlet{innerblockbodyfgcolor}{black}
+    % note colors
+    \colorlet{notefgcolor}{white}
+    \colorlet{notebgcolor}{colorThree}
+    \colorlet{notefrcolor}{colorThree}
+}
+% Define title style - start
+\definetitlestyle{ucl}{
+    width=\paperwidth, roundedcorners=0, linewidth=0pt, innersep=15mm,
+    titletotopverticalspace=0mm, titletoblockverticalspace=15mm,
+    titlegraphictotitledistance=15mm, titletextscale=1
+}{
+    \coordinate (titletopleft) at (\titleposleft, \titlepostop);
+    \coordinate (titletopright) at (\titleposright, \titlepostop);
+    \coordinate (titlebottomleft) at (\titleposleft, \titleposbottom);
+    \coordinate (titlebottomright) at (\titleposright, \titleposbottom);
+    \begin{scope}[shift={(titlebottomright)}, scale=3.6]
+        \input{uclbanner.tikz}
+    \end{scope}
+}
+% Define title style - end
+
+% Define block style - start
+\defineblockstyle{ucl}{
+    titlewidthscale=1, bodywidthscale=1, titleleft,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=0pt,
+    bodyverticalshift=0pt, roundedcorners=2pt, linewidth=0.1cm,
+    titleinnersep=0.5cm, bodyinnersep=1cm
+}{
+    \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]
+        \ifBlockHasTitle %
+            \draw[color=blocktitlebgcolor, fill=blocktitlebgcolor] (blockbody.south west) rectangle (blocktitle.north east);
+            \draw[color=blocktitlebgcolor, fill=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
+        \else
+            \draw[color=blocktitlebgcolor, fill=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
+        \fi
+    \end{scope}
+}
+% Define block style - end
+
+% Define innerblock style - start
+\defineinnerblockstyle{ucl}{
+    titlewidthscale=1, bodywidthscale=1, titlecenter,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=0pt,
+    bodyverticalshift=0pt, roundedcorners=5, linewidth=4pt,
+    titleinnersep=10pt, bodyinnersep=12pt
+}{
+    \begin{scope}[line width=\innerblocklinewidth, rounded
+            corners=\innerblockroundedcorners, solid]
+        \ifInnerblockHasTitle %
+            \draw[color=innerblocktitlebgcolor, fill=innerblocktitlebgcolor]
+            (innerblockbody.south west) rectangle (innerblocktitle.north east);
+            \draw[color=innerblocktitlebgcolor, fill=innerblockbodybgcolor]
+            (innerblockbody.south west) rectangle (innerblockbody.north east);
+        \else
+            \draw[color=innerblocktitlebgcolor, fill=innerblockbodybgcolor]
+            (innerblockbody.south west) rectangle (innerblockbody.north east);
+        \fi
+    \end{scope}
+}
+% Define innerblock style - end
+
+\usetitlestyle{ucl}
+\useblockstyle{ucl}
+\useinnerblockstyle{ucl}
+\usebackgroundstyle{Default}
+
+% comment out if you want to credit tikzposter
+\tikzposterlatexaffectionproofoff
+
+% Set the define color style
+\usecolorstyle{UCLBlack}

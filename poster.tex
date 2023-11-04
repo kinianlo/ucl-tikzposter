@@ -1,0 +1,104 @@
+\documentclass[25pt, a0paper, portrait]{tikzposter}
+\usepackage{ucltikzposter}
+
+\usecolorstyle{UCLDarkBlue}
+% the 7 available color styles are:
+% UCLVibrantPurple, UCLVibrantGreen, UCLVibrantBlue, UCLVibrantYellow, UCLVibrantPink, UCLDarkBlue, UCLBlack
+
+\usepackage{amsmath, amssymb}
+
+% Uncomment the following two lines to use sans-serif font and math
+% \usepackage{sansmath}
+% \renewcommand{\familydefault}{\sfdefault}
+% \sansmath
+
+\title{\parbox{\linewidth}{Title of the Poster}}
+
+\author{John Smith$^{1,*}$ \quad Mary Lamb$^{1,\dagger}$ \quad Jin Xu$^{2,\ddagger}$}
+
+\institute{$^1$Department of Computer Science, University College London, WC1E 6BT London, United Kingdom \\ $^2$The company, 12345, London, United Kingdom}
+
+\begin{document}
+\maketitle
+
+\begin{columns}
+    \column{0.5}
+    \block{Motivations}{
+        \begin{enumerate}
+            \item The is the first item
+            \item This is the second item
+            \item This is the third item
+        \end{enumerate}
+    }
+    \block{Sheaf-theoretic framework$^1$}{
+        \begin{minipage}{0.6\linewidth}
+            \begin{itemize}
+                \item 1st item on the left
+                \item 2nd item on the left
+                \item 3rd item on the left
+            \end{itemize}
+        \end{minipage}
+        \begin{minipage}{0.35\linewidth}
+            \begin{itemize}
+                \item 1st item on the right
+                \item 2nd item on the right
+                \item 3rd item on the right
+            \end{itemize}
+        \end{minipage}
+        \begin{center}
+            \hspace{3cm}
+        \end{center}
+        \innerblock{An inner block}{
+            Say something important here
+        }
+        \hspace{0.5cm}
+        \begin{equation}
+            E = mc^2 
+        \end{equation}
+        \begin{equation}
+            a \in \mathbb{R}^n
+        \end{equation}
+    }
+    \column{0.5}
+    \block{Results}{
+        This is the result...
+    }
+
+    \block{Future}{
+        This is the future...
+    }
+
+\end{columns}
+
+\node [above right,
+    text=titlefgcolor,
+    outer sep=0pt,
+    minimum width=\textwidth,
+    minimum height=7cm,
+    align=left,
+    fill=titlebgcolor,inner sep=15mm] at (bottomleft) {
+
+    \begin{minipage}[b][][b]{0.20\linewidth}
+        {\large $^*$myname@ucl.ac.uk \\ $^\dagger$myname@ucl.ac.uk \\ $^\ddagger$myname@company.com}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.35\linewidth}
+        {Main references}
+        \begin{enumerate}
+            \itemsep0em
+            \item T. Adam and A. Hamburger, arXiv:3744.0264
+            \item K. Peters, arXiv:3744.123
+            \item J. Smith, arXiv:3744.333
+        \end{enumerate}
+
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c][][b]{0.40\linewidth}
+        $\vcenter{\hbox{\includegraphics[width=0.30\linewidth]{figures/ukri_logo.png}}}$
+        \hfill
+        $\vcenter{\hbox{\includegraphics[width=0.18\linewidth]{funding_logo.pdf}}}$
+        \hfill
+        $\vcenter{\hbox{\includegraphics[width=0.40\linewidth]{funding_logo.pdf}}}$
+    \end{minipage}
+};
+\end{document}
