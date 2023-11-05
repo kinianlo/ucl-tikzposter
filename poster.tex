@@ -1,20 +1,20 @@
-\documentclass[25pt, a0paper, portrait]{tikzposter}
+\documentclass[25pt, a0paper, portrait, innermargin=2.5cm]{tikzposter}
 \usepackage{ucltikzposter}
 
 \usecolorstyle{UCLDarkBlue}
 % the 7 available color styles are:
 % UCLVibrantPurple, UCLVibrantGreen, UCLVibrantBlue, UCLVibrantYellow, UCLVibrantPink, UCLDarkBlue, UCLBlack
 
-\usepackage{amsmath, amssymb}
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
 
-% Uncomment the following two lines to use sans-serif font and math
-% \usepackage{sansmath}
-% \renewcommand{\familydefault}{\sfdefault}
-% \sansmath
+% Uncomment the following to use sans-serif font and math
+\usepackage{sansmath}
+\renewcommand{\familydefault}{\sfdefault}
+\sansmath
 
-\title{\parbox{\linewidth}{Title of the Poster}}
+\title{\parbox{\linewidth}{Title of the Poster blah blah blah blah blah blah blah the essentithe essent manobonobility}}
 
-\author{John Smith$^{1,*}$ \quad Mary Lamb$^{1,\dagger}$ \quad Jin Xu$^{2,\ddagger}$}
+\author{John Smith$^{1,*}$ \quad Mary Lamb$^{1,\dagger}$ \quad Jin Xu$^{2,\ddagger}$ \quad Jane Doe$^{1,\dagger}$ \quad John Doe$^{1,\dagger}$ \quad John Doe$^{1}$ \quad Panny Lagagomany$^{1}$ \quad Panny Lagagomany$^{1}$}
 
 \institute{$^1$Department of Computer Science, University College London, WC1E 6BT London, United Kingdom \\ $^2$The company, 12345, London, United Kingdom}
 
@@ -66,6 +66,10 @@
 
     \block{Future}{
         This is the future...
+
+        \innerblock{theorem}{
+            This is a theorem
+        }
     }
 
 \end{columns}
@@ -96,9 +100,9 @@
     \begin{minipage}[c][][b]{0.40\linewidth}
         $\vcenter{\hbox{\includegraphics[width=0.30\linewidth]{figures/ukri_logo.png}}}$
         \hfill
-        $\vcenter{\hbox{\includegraphics[width=0.18\linewidth]{funding_logo.pdf}}}$
+        $\vcenter{\hbox{\includegraphics[width=0.18\linewidth]{figures/ukri_logo.png}}}$
         \hfill
-        $\vcenter{\hbox{\includegraphics[width=0.40\linewidth]{funding_logo.pdf}}}$
+        $\vcenter{\hbox{\includegraphics[width=0.40\linewidth]{figures/ukri_logo.png}}}$
     \end{minipage}
 };
 \end{document}

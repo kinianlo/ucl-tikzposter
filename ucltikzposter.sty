@@ -1,14 +1,87 @@
-\settitle{
-    \hspace{15mm}
-    \begin{minipage}{0.75\linewidth}
-        \color{titlefgcolor}
-        {\bfseries \Huge \@title \par}
-        \vspace*{1em}
-        {\huge  \@author \par}
-        \vspace*{1em}
-        {\large  \@institute}
-    \end{minipage}
+\ProvidesPackage{ucltikzposter}[2023/11/04 UCL TikZ Poster Style]
+
+% define important lengths
+\makeatletter
+\newlength{\ucltikzposter@logoheight} 
+\newlength{\ucltikzposter@logorightmargin}
+\newlength{\ucltikzposter@bannerheight} % height of title (banner) is controlled by how much content is in the title by tikzposter itself
+\newlength{\ucltikzposter@margin}
+\newlength{\ucltikzposter@titleinnersep}
+
+\ifthenelse{\lengthtest{\paperwidth > \paperheight}}
+{%landscape
+    \setlength{\ucltikzposter@logoheight}{3.5cm}
+    \setlength{\ucltikzposter@logorightmargin}{2.15cm}
+    \setlength{\ucltikzposter@bannerheight}{13.27cm}
 }
+{%portrait
+    \setlength{\ucltikzposter@logoheight}{3.5cm}
+    \setlength{\ucltikzposter@logorightmargin}{2.15cm}
+    \setlength{\ucltikzposter@bannerheight}{15.23cm}
+}
+\setlength{\ucltikzposter@margin}{1.5cm}
+\setlength{\ucltikzposter@titleinnersep}{1.5cm}
+
+\makeatother
+
+% declare options
+\RequirePackage{xkeyval}
+
+\settitle{
+    \vspace*{-\titleinnersep}
+    \vspace*{\TP@innermargin}
+    \hspace*{-\titleinnersep}
+    \hspace*{\TP@innermargin}
+    {\color{titlefgcolor}
+        \begin{minipage}{\titlewidth - 2\TP@innermargin}
+            {\bfseries \Huge \@title \par}
+            \begin{minipage}{\titlewidth - \ucltikzposter@logorightmargin - 4.15\ucltikzposter@logoheight - 2\TP@innermargin}
+                \vspace*{\titleinnersep}
+                {\huge  \@author \par}
+                \vspace*{\titleinnersep}
+                {\large  \@institute}
+            \end{minipage}
+        \end{minipage}
+    }
+}
+
+\RequirePackage{xcolor}
+% Use the following core colours if possible:
+% UCLVibrantPurple
+% UCLVibrantGreen
+% UCLVibrantBlue
+% UCLVibrantYellow
+% UCLVibrantPink
+% UCLDarkBlue
+% UCLBlack
+% UCLWhite
+
+\definecolor{UCLDarkPurple}{cmyk}{0.94,1.00,0.36,0.48}
+\definecolor{UCLDarkGreen}{cmyk}{0.88,0.49,0.59,0.60}
+\definecolor{UCLDarkBlue}{cmyk}{1.00,0.87,0.43,0.46}
+\definecolor{UCLDarkYellow}{cmyk}{0.59,0.51,0.54,0.50}
+\definecolor{UCLDarkPink}{cmyk}{0.57,1.00,0.36,0.60}
+\definecolor{UCLVibrantPurple}{cmyk}{0.87,1.00,0.18,0.06}
+\definecolor{UCLVibrantGreen}{cmyk}{0.62,0.00,0.83,0.00}
+\definecolor{UCLVibrantBlue}{cmyk}{0.66,0.00,0.29,0.00}
+\definecolor{UCLVibrantYellow}{cmyk}{0.00,0.23,0.84,0.00}
+\definecolor{UCLVibrantPink}{cmyk}{0.24,0.99,0.31,0.15}
+\definecolor{UCLMutedPurple}{cmyk}{0.25,0.33,0.18,0.02}
+\definecolor{UCLMutedGreen}{cmyk}{0.27,0.10,0.41,0.01}
+\definecolor{UCLMutedBlue}{cmyk}{0.33,0.02,0.11,0.00}
+\definecolor{UCLMutedYellow}{cmyk}{0.17,0.13,0.22,0.01}
+\definecolor{UCLMutedPink}{cmyk}{0.13,0.33,0.15,0.01}
+
+\definecolor{UCLBlack}{cmyk}{0, 0, 0, 1}
+\definecolor{UCLBlack90}{cmyk}{0, 0, 0, 0.9}
+\definecolor{UCLBlack80}{cmyk}{0, 0, 0, 0.8}
+\definecolor{UCLBlack60}{cmyk}{0, 0, 0, 0.6}
+\definecolor{UCLBlack40}{cmyk}{0, 0, 0, 0.4}
+\definecolor{UCLBlack20}{cmyk}{0, 0, 0, 0.2}
+\definecolor{UCLBlack15}{cmyk}{0, 0, 0, 0.15}
+\definecolor{UCLBlack10}{cmyk}{0, 0, 0, 0.1}
+\definecolor{UCLBlack5}{cmyk}{0, 0, 0, 0.05}
+\definecolor{UCLWhite}{cmyk}{0, 0, 0, 0}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % Define the eight core UCL colours as defined in UCL brand: https://www.ucl.ac.uk/brand/brand-essentials/colour-palette
@@ -177,9 +250,9 @@
 }
 \definecolorstyle{UCLDarkBlue}{
     % define the default color palette for this color style
-    \definecolor{colorOne}{RGB}{0,34,72} % Dark Blue of the UCL monotone palette
-    \definecolor{colorTwo}{RGB}{255,255,255} % White
-    \definecolor{colorThree}{RGB}{172,20,90} % Pink / Vibrant of the UCL monotone palette
+    \definecolor{colorOne}{named}{UCLDarkBlue} % Dark Blue of the UCL monotone palette
+    \definecolor{colorTwo}{named}{UCLWhite} % White
+    \definecolor{colorThree}{named}{UCLVibrantPink} % Pink / Vibrant of the UCL monotone palette
 }{
     % Background Colors
     \colorlet{backgroundcolor}{colorTwo}
@@ -204,16 +277,21 @@
 }
 % Define title style - start
 \definetitlestyle{ucl}{
-    width=\paperwidth, roundedcorners=0, linewidth=0pt, innersep=15mm,
-    titletotopverticalspace=0mm, titletoblockverticalspace=15mm,
-    titlegraphictotitledistance=15mm, titletextscale=1
+    width=\paperwidth, linewidth=10pt, innersep=\ucltikzposter@titleinnersep,
+    titletotopverticalspace=0mm, titletoblockverticalspace=\ucltikzposter@margin
 }{
-    \coordinate (titletopleft) at (\titleposleft, \titlepostop);
-    \coordinate (titletopright) at (\titleposright, \titlepostop);
-    \coordinate (titlebottomleft) at (\titleposleft, \titleposbottom);
-    \coordinate (titlebottomright) at (\titleposright, \titleposbottom);
-    \begin{scope}[shift={(titlebottomright)}, scale=3.6]
-        \input{uclbanner.tikz}
+    \tikzset{
+        x=\ucltikzposter@logoheight,
+        y=\ucltikzposter@logoheight,
+        banner/.style={fill=titlebgcolor},
+        portico/.style={fill=titlefgcolor}
+    }
+    \newcommand{\rightmarginucl}{\ucltikzposter@logorightmargin}
+    % shift the origin to the bottom right of the title
+    \begin{scope}[shift={(\titleposright-\rightmarginucl, \titleposbottom)}]
+        \makeatletter
+        \input{uclbanner}
+        \makeatother
     \end{scope}
 }
 % Define title style - end
